@@ -46,7 +46,7 @@ namespace ComputeDashBoardApp.Services
             return PageEc2Instances(listOfAllInstances).Select(activeInstance => new ElasticCloudViewModel
             {
                 Id = activeInstance.InstanceId,
-                Name = activeInstance.Tags.Find(item => item.Key == "Name").Value,
+                Name = activeInstance.Tags.Find(item => item.Key == "Name") != null ? activeInstance.Tags.Find(item => item.Key == "Name").Value : string.Empty,
                 Type = activeInstance.InstanceType,
                 State = activeInstance.State.Name.Value,
                 AvailableZone = activeInstance.Placement.AvailabilityZone,
