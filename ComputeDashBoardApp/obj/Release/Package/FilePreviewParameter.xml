@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="computedashboardapp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\ComputeDashBoardApp-master\\ComputeDashBoardApp-master\\ComputeDashBoardApp\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\ComputeDashBoardApp-master\\ComputeDashBoardApp-master\\ComputeDashBoardApp\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="computedashboardapp/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\ComputeDashBoardApp-master\\ComputeDashBoardApp-master\\ComputeDashBoardApp\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:g5il974yws.database.windows.net,1433;Initial Catalog=computemessageboarddb;User ID=yash1811@g5il974yws;Password=Line_9a65" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\ComputeDashBoardApp-master\\ComputeDashBoardApp-master\\ComputeDashBoardApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
